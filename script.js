@@ -1,3 +1,6 @@
+function game() {
+    for (let i = 0; i < 5; i++) {
+
 function getComputerChoice(choices){
     return choices[Math.floor(Math.random()*choices.length)];
  }
@@ -9,10 +12,10 @@ const playerSelection = prompt("Please choose between Rock, Paper, or Scissors."
 function playRound(playerSelection, computerSelection){
     let response = "Computer chose " + computerSelection
     + " which beats " + playerSelection + ". Try again!";
-    if(computerSelection === playerSelection) {
+    if(computerSelection.toUpperCase() === playerSelection.toUpperCase()) {
         console.log("Tie!")
     }
-        else if (playerSelection.toUpperCase() ===! "ROCK" || "PAPER" || "SCISSORS") {
+        else if (playerSelection.toUpperCase() !== "ROCK" && playerSelection.toUpperCase() !== "PAPER" && playerSelection.toUpperCase() !== "SCISSORS") {
             console.log(playerSelection + " is not a valid option. Please try again.")
         }
             else if(computerSelection === "Rock" && playerSelection.toUpperCase() === "SCISSORS") {
@@ -29,9 +32,7 @@ function playRound(playerSelection, computerSelection){
 
 console.log(playRound(playerSelection, computerSelection));
 
-function game() {
-    for (let i = 0; i < 5; i++) {
-        playRound();
-        console.log("Round " + i + " complete! Time for Round " + i+1 + ".");
+
+        
     }
 }
