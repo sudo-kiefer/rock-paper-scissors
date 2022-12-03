@@ -6,23 +6,32 @@ const choices = ["Rock", "Paper", "Scissors"];
 const computerSelection = getComputerChoice(choices);
 const playerSelection = prompt("Please choose between Rock, Paper, or Scissors.");
  
- function playRound(playerSelection, computerSelection){
+function playRound(playerSelection, computerSelection){
     let response = "Computer chose " + computerSelection
     + " which beats " + playerSelection + ". Try again!";
     if(computerSelection === playerSelection) {
-        alert("Tie!")
+        console.log("Tie!")
     }
-         else if(computerSelection === "Rock" && playerSelection.toUpperCase() === "SCISSORS") {
-            alert(response);
+        else if (playerSelection.toUpperCase() ===! "ROCK" || "PAPER" || "SCISSORS") {
+            console.log(playerSelection + " is not a valid option. Please try again.")
         }
-             else if(computerSelection === "Paper" && playerSelection.toUpperCase() === "ROCK") {
-                alert(response);
+            else if(computerSelection === "Rock" && playerSelection.toUpperCase() === "SCISSORS") {
+                console.log(response);
             }
-                 else if(computerSelection === "Scissors" && playerSelection.toUpperCase() === "PAPER") {
-                    alert(response);
+                else if(computerSelection === "Paper" && playerSelection.toUpperCase() === "ROCK") {
+                    console.log(response);
                 }
-                    else{alert("You chose " + playerSelection
-                    + " which beats " + computerSelection + ". Congrats!")}
+                    else if(computerSelection === "Scissors" && playerSelection.toUpperCase() === "PAPER") {
+                        console.log(response);
+                    }
+                        else{console.log("You chose " + playerSelection+ " which beats " + computerSelection + ". Congrats!")}
  }
 
 console.log(playRound(playerSelection, computerSelection));
+
+function game() {
+    for (let i = 0; i < 5; i++) {
+        playRound();
+        console.log("Round " + i + " complete! Time for Round " + i+1 + ".");
+    }
+}
