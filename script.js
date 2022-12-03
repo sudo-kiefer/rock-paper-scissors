@@ -39,9 +39,19 @@ function playRound(playerSelection, computerSelection){
  }
 
 console.log(playRound(playerSelection, computerSelection));
-console.log(playerScore);
-console.log(computerScore);
+console.log("Player: " + playerScore);
+console.log("Computer: " + computerScore);
 
+    }
+
+    if(playerScore === computerScore) {
+        alert("Tie Game!")
+    }
+    else if(playerScore > computerScore) {
+        alert("You Win!")
+    }
+    else if(playerScore < computerScore) {
+        alert("You Lose. Better luck next time!")
     }
 }
 
