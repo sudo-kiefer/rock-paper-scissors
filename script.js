@@ -16,7 +16,8 @@ function playRound(playerSelection, computerSelection){
         console.log("Tie!")
     }
         else if (playerSelection.toUpperCase() !== "ROCK" && playerSelection.toUpperCase() !== "PAPER" && playerSelection.toUpperCase() !== "SCISSORS") {
-            console.log(playerSelection + " is not a valid option. Please try again.")
+            console.log(playerSelection + " is not a valid option. Please try again.");
+            i = (i-1);
         }
             else if(computerSelection === "Rock" && playerSelection.toUpperCase() === "SCISSORS") {
                 console.log(response);
