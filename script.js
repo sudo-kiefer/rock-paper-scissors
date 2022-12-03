@@ -7,22 +7,21 @@ const computerSelection = getComputerChoice(choices);
 const playerSelection = prompt("Please choose between Rock, Paper, or Scissors.");
  
  function playRound(playerSelection, computerSelection){
-    let response = console.log("Computer chose " + computerSelection
-    + " which beats " + playerSelection + ". Try again!");
+    let response = "Computer chose " + computerSelection
+    + " which beats " + playerSelection + ". Try again!";
     if(computerSelection === playerSelection) {
         console.log("Tie!")
     }
          else if(computerSelection === "Rock" && playerSelection.toUpperCase() === "SCISSORS") {
-          response;
+            console.log(response);
         }
              else if(computerSelection === "Paper" && playerSelection.toUpperCase() === "ROCK") {
-                response;
+                console.log(response);
             }
                  else if(computerSelection === "Scissors" && playerSelection.toUpperCase() === "PAPER") {
-                   response;
+                    console.log(response);
                 }
                     else{console.log("You chose " + playerSelection
                     + " which beats " + computerSelection + ". Congrats!")}
  }
  
-return(playRound(playerSelection, computerSelection));
