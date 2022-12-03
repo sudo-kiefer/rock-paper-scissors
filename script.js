@@ -7,19 +7,19 @@ function playRound(playerSelection, computerSelection){
         console.log("Tie!")
     }
          else if(computerSelection === "Rock" && playerSelection.toUpperCase() === "SCISSORS") {
-            console.log("Computer chose " + getComputerChoice(choices)
+            console.log("Computer chose " + computerSelection
              + " which beats " + playerSelection + ". Try again!");
         }
              else if(computerSelection === "Paper" && playerSelection.toUpperCase() === "ROCK") {
-                console.log("Computer chose " + getComputerChoice(choices)
+                console.log("Computer chose " + computerSelection
              + " which beats " + playerSelection + ". Try again!");
             }
                  else if(computerSelection === "Scissors" && playerSelection.toUpperCase() === "PAPER") {
-                    console.log("Computer chose " + getComputerChoice(choices)
+                    console.log("Computer chose " + computerSelection
              + " which beats " + playerSelection + ". Try again!");
                 }
                     else{console.log("You chose " + playerSelection
-                    + " which beats " + getComputerChoice(choices) + ". Congrats!")}
+                    + " which beats " + computerSelection + ". Congrats!")}
 }
 
 
