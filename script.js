@@ -1,3 +1,6 @@
+let playerScore = 0;
+let computerScore = 0;
+
 function game() {
     for (let i = 0; i < 5; i++) {
 
@@ -10,6 +13,7 @@ const computerSelection = getComputerChoice(choices);
 const playerSelection = prompt("Round " + (i+1) + ": Please choose between Rock, Paper, or Scissors.");
  
 function playRound(playerSelection, computerSelection){
+    
     let response = "Computer chose " + computerSelection
     + " which beats " + playerSelection + ". Try again!";
     if(computerSelection.toUpperCase() === playerSelection.toUpperCase()) {
@@ -21,17 +25,23 @@ function playRound(playerSelection, computerSelection){
         }
             else if(computerSelection === "Rock" && playerSelection.toUpperCase() === "SCISSORS") {
                 console.log(response);
+                computerScore = computerScore + 1;
             }
                 else if(computerSelection === "Paper" && playerSelection.toUpperCase() === "ROCK") {
                     console.log(response);
+                    computerScore = computerScore + 1;
                 }
                     else if(computerSelection === "Scissors" && playerSelection.toUpperCase() === "PAPER") {
                         console.log(response);
+                        computerScore = computerScore + 1;
                     }
-                        else{console.log("You chose " + playerSelection+ " which beats " + computerSelection + ". Congrats!")}
+                        else{console.log("You chose " + playerSelection+ " which beats " + computerSelection + ". Congrats!"); playerScore = playerScore + 1;}
  }
 
 console.log(playRound(playerSelection, computerSelection));
+console.log(playerScore);
+console.log(computerScore);
 
     }
 }
+
