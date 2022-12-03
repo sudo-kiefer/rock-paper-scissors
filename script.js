@@ -2,7 +2,7 @@ function getComputerChoice(choices){
     return choices[Math.floor(Math.random()*choices.length)];
  }
 
-const choices = ["rock", "paper", "scissors"];
+const choices = ["Rock", "Paper", "Scissors"];
 const computerSelection = getComputerChoice(choices);
 const playerSelection = prompt("Please choose between Rock, Paper, or Scissors.");
  
@@ -24,4 +24,5 @@ const playerSelection = prompt("Please choose between Rock, Paper, or Scissors."
                     else{console.log("You chose " + playerSelection
                     + " which beats " + computerSelection + ". Congrats!")}
  }
- 
+
+console.log(playRound(playerSelection, computerSelection));
