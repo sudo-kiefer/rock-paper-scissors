@@ -7,7 +7,7 @@ function getComputerChoice(choices){
 
 const choices = ["Rock", "Paper", "Scissors"];
 const computerSelection = getComputerChoice(choices);
-const playerSelection = prompt("Please choose between Rock, Paper, or Scissors.");
+const playerSelection = prompt("Round " + (i+1) + ": Please choose between Rock, Paper, or Scissors.");
  
 function playRound(playerSelection, computerSelection){
     let response = "Computer chose " + computerSelection
@@ -32,7 +32,5 @@ function playRound(playerSelection, computerSelection){
 
 console.log(playRound(playerSelection, computerSelection));
 
-
-        
     }
 }
