@@ -10,18 +10,18 @@ const playerSelection = prompt("Please choose between Rock, Paper, or Scissors."
     let response = "Computer chose " + computerSelection
     + " which beats " + playerSelection + ". Try again!";
     if(computerSelection === playerSelection) {
-        console.log("Tie!")
+        alert("Tie!")
     }
          else if(computerSelection === "Rock" && playerSelection.toUpperCase() === "SCISSORS") {
-            console.log(response);
+            alert(response);
         }
              else if(computerSelection === "Paper" && playerSelection.toUpperCase() === "ROCK") {
-                console.log(response);
+                alert(response);
             }
                  else if(computerSelection === "Scissors" && playerSelection.toUpperCase() === "PAPER") {
-                    console.log(response);
+                    alert(response);
                 }
-                    else{console.log("You chose " + playerSelection
+                    else{alert("You chose " + playerSelection
                     + " which beats " + computerSelection + ". Congrats!")}
  }
 
