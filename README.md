@@ -1,1 +1,1 @@
-A simple command line rock-paper-scissors game.
+A simple console based rock-paper-scissors game.
