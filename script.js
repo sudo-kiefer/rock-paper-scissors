@@ -17,7 +17,8 @@ function playRound(playerSelection, computerSelection){
     let response = "Computer chose " + computerSelection
     + " which beats " + playerSelection + ". Try again!";
     if(computerSelection.toUpperCase() === playerSelection.toUpperCase()) {
-        console.log("Tie!")
+        console.log("Tie!");
+        i = (i-1);
     }
         else if (playerSelection.toUpperCase() !== "ROCK" && playerSelection.toUpperCase() !== "PAPER" && playerSelection.toUpperCase() !== "SCISSORS") {
             console.log(playerSelection + " is not a valid option. Please try again.");
